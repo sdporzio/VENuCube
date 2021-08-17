@@ -4,11 +4,14 @@ This is the repository for the MicroBooNE VR project.
 
 ## Requirements
 
-You'll need to install usually the latest version of Unity (see below). You'll also need the computer graphics program Blender. 
+You'll need to install Unity (usually 5.5.0f3, 5.6.7f1 for this specific branch)(see below). 
+You'll also need the computer graphics program Blender (version 2.79). 
 
 ## A word about Unity versions
 
 Git and Unity don't really get along all that well. In order to make them better bedfellows, it's recommended that everyone working uses the same version of Unity. The repository currently uses version 5.5.0f3.
+
+This specific branch uses Unity 5.6.7f1 to support the SteamVR plugin.
 
 Unity can be downloaded here: https://unity3d.com/get-unity/download/archive
 
@@ -67,3 +70,9 @@ To run the Cardboard version (mobile app) select:
 * Scenes/Cardboard Scenes/splashScreenFermilabMicroBooNECardboard
 * Scenes/Cardboard Scenes/MainMenuCardboard
 * Scenes/Cardboard Scenes/DisplayVR
+
+## Project fix for the main branch
+
+If an "DllNotFoundException" error appears when trying to run the standalone version's "VR_Display" scene,
+copy the content of "OculusSampleFrameworkProject_1.5.0/OculusSampleFrameworkProject/Assets/Plugins" (with the exception of the "Android" folder and its .meta file) in "Assets/plugins".
+To make the "VR_Display" scene work in a non-Oculus VR device, go into "Edit > Project settings > Player" and add "OpenVR" to the Virtual Reality SDKs.
